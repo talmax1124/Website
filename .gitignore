@@ -1,13 +1,19 @@
-# dependencies installed by npm
 node_modules
-
-# build artefacts
-public
-css
-
-# secrets and errors
+dist
+.output
+.nitro
+.tanstack
+.vercel
+.grok
 .env
-.log
-
-# macOS related files
+.env.*
+!.env.example
+*.log
 .DS_Store
+.node_modules.lock
+.project_id
+screenshots
+artifacts
+attachments
+coverage
+.cache

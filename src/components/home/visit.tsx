@@ -1,0 +1,55 @@
+import { Link } from "@tanstack/react-router";
+import { Reveal } from "@/components/motion/reveal";
+import { Button } from "@/components/ui/button";
+import { useLanguage } from "@/lib/language";
+import { SITE } from "@/lib/site";
+
+export function Visit() {
+  const { t } = useLanguage();
+
+  return (
+    <section className="border-t border-line bg-surface">
+      <div className="mx-auto grid max-w-6xl items-stretch gap-8 px-4 py-20 sm:px-6 sm:py-28 lg:grid-cols-2">
+        <Reveal>
+          <p className="kicker">{t.visit.kicker}</p>
+          <h2 className="mt-3 font-display text-4xl font-semibold tracking-tight sm:text-5xl">
+            {t.visit.title}
+          </h2>
+          <p className="mt-4 text-muted">{SITE.address.full}</p>
+          <ul className="mt-6 divide-y divide-line">
+            {t.visit.days.map((day) => (
+              <li
+                key={day.label}
+                className="flex items-center justify-between py-3 text-sm"
+              >
+                <span className="font-medium">{day.label}</span>
+                <span className="tabular-nums text-muted">{day.value}</span>
+              </li>
+            ))}
+          </ul>
+          <div className="mt-8 flex flex-wrap gap-3">
+            <Button asChild variant="steel">
+              <a href={SITE.maps.directions} target="_blank" rel="noreferrer">
+                {t.visit.directions}
+              </a>
+            </Button>
+            <Button asChild variant="outline">
+              <Link to="/contact">{t.nav.contact}</Link>
+            </Button>
+          </div>
+        </Reveal>
+        <Reveal delay={0.08}>
+          <div className="overflow-hidden rounded-xl bg-elevated shadow-[var(--shadow-border)]">
+            <iframe
+              title={SITE.address.full}
+              src={SITE.maps.embed}
+              className="h-80 w-full min-h-80 lg:h-full"
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        </Reveal>
+      </div>
+    </section>
+  );
+}
