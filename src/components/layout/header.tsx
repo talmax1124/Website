@@ -46,11 +46,11 @@ export function Header() {
       <div className="mx-auto flex h-[4.25rem] max-w-6xl items-center justify-between gap-4 px-4 sm:h-[4.75rem] sm:px-6">
         <Link
           to="/"
-          className="flex items-center gap-2.5 text-fg"
+          className="flex min-w-0 items-center gap-2 text-fg"
           aria-label={SITE.name}
         >
           <Mark />
-          <span className="font-display text-base font-semibold tracking-[0.08em] uppercase whitespace-nowrap sm:text-lg">
+          <span className="font-display text-[0.95rem] font-semibold tracking-[0.06em] uppercase whitespace-nowrap sm:text-lg sm:tracking-[0.08em]">
             Obsessions Wheels
           </span>
         </Link>

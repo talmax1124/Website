@@ -13,9 +13,12 @@ import { JsonLd } from "@/components/layout/json-ld";
 import { SiteShell } from "@/components/layout/site-shell";
 import { LanguageProvider, useLanguage } from "@/lib/language";
 import { Button } from "@/components/ui/button";
+import { SITE } from "@/lib/site";
 import appCss from "../styles.css?url";
 
-const APP_NAME = "Obsessions Wheels";
+const APP_NAME = SITE.name;
+const OG_IMAGE = `${SITE.url}${SITE.ogImage}`;
+const LOGO = `${SITE.url}${SITE.logo}`;
 
 function NotFound() {
   const { t } = useLanguage();
@@ -42,19 +45,33 @@ export const Route = createRootRoute({
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: APP_NAME },
-      {
-        name: "description",
-        content:
-          "OEM original rims and replica wheels in Kissimmee, Florida. Family-run shop. Financing and nationwide shipping.",
-      },
-      { name: "theme-color", content: "#F2F4F3" },
+      { name: "description", content: SITE.description },
+      { name: "theme-color", content: "#061734" },
+      { property: "og:title", content: APP_NAME },
+      { property: "og:description", content: SITE.description },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: SITE.url },
+      { property: "og:site_name", content: APP_NAME },
+      { property: "og:locale", content: "en_US" },
+      { property: "og:image", content: OG_IMAGE },
+      { property: "og:image:alt", content: APP_NAME },
+      { property: "og:image:width", content: "1200" },
+      { property: "og:image:height", content: "630" },
+      { property: "og:logo", content: LOGO },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: APP_NAME },
+      { name: "twitter:description", content: SITE.description },
+      { name: "twitter:image", content: OG_IMAGE },
+      { name: "twitter:image:alt", content: APP_NAME },
     ],
     links: [
-      { rel: "icon", type: "image/svg+xml", href: "/favicon.svg" },
-      { rel: "icon", type: "image/png", href: "/brand/logo.png" },
+      { rel: "canonical", href: SITE.url },
+      { rel: "icon", type: "image/png", sizes: "32x32", href: "/favicon-32.png" },
+      { rel: "icon", type: "image/png", sizes: "192x192", href: "/icon-192.png" },
+      { rel: "icon", type: "image/png", href: SITE.logo },
+      { rel: "apple-touch-icon", href: "/apple-touch-icon.png" },
       { rel: "stylesheet", href: appCss },
       { rel: "manifest", href: "/__grok/manifest.webmanifest" },
-      { rel: "apple-touch-icon", href: "/__grok/icon-180.png" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       {
         rel: "preconnect",

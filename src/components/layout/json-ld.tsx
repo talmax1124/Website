@@ -1,6 +1,8 @@
 import { SITE } from "@/lib/site";
 
 export function JsonLd() {
+  const logo = `${SITE.url}${SITE.logo}`;
+  const image = `${SITE.url}${SITE.ogImage}`;
   const data = {
     "@context": "https://schema.org",
     "@type": "AutoPartsStore",
@@ -9,7 +11,9 @@ export function JsonLd() {
     description: SITE.description,
     telephone: SITE.phones.cell,
     email: SITE.email,
-    image: "/og.jpg",
+    url: SITE.url,
+    logo,
+    image,
     address: {
       "@type": "PostalAddress",
       streetAddress: SITE.address.street,
@@ -23,7 +27,6 @@ export function JsonLd() {
       latitude: SITE.geo.lat,
       longitude: SITE.geo.lng,
     },
-    url: "https://obsessionswheels.com",
     openingHoursSpecification: [
       {
         "@type": "OpeningHoursSpecification",

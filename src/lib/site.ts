@@ -5,6 +5,9 @@ export const SITE = {
   tagline: "Where there is quality, there is no competition.",
   description:
     "OEM original rims and precision replicas in Kissimmee, Florida. Family-run shop. Financing and nationwide shipping.",
+  url: "https://obsessionswheels.com",
+  logo: "/brand/logo-full.png",
+  ogImage: "/og.jpg",
   address: {
     street: "1897 John Henry Jones Blvd",
     city: "Kissimmee",
