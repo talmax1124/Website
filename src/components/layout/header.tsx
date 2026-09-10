@@ -46,13 +46,10 @@ export function Header() {
       <div className="mx-auto flex h-[4.25rem] max-w-6xl items-center justify-between gap-4 px-4 sm:h-[4.75rem] sm:px-6">
         <Link
           to="/"
-          className="flex items-center gap-2.5 text-fg"
+          className="flex items-center text-fg"
           aria-label={SITE.name}
         >
-          <Mark className="size-11 sm:size-12" />
-          <span className="font-display text-base font-semibold tracking-[0.08em] uppercase whitespace-nowrap sm:text-lg">
-            Obsessions Wheels
-          </span>
+          <Mark />
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
@@ -115,7 +112,7 @@ export function Header() {
               </Button>
             </SheetTrigger>
             <SheetContent>
-              <SheetTitle className="pr-8 tracking-[0.08em] uppercase">
+              <SheetTitle className="font-wordmark pr-8 text-2xl font-normal tracking-wide">
                 Obsessions Wheels
               </SheetTitle>
               <nav className="mt-8 flex flex-col gap-1">
