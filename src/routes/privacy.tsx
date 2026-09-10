@@ -16,7 +16,7 @@ function PrivacyPage() {
         </p>
         <p>
           Language preference is stored in your browser. The site does not require an
-          account. Third-party financing partners (Snap, American First Finance, Acima,
+          account. Third-party financing partners (Snap, American First Finance,
           Koalafi) have their own privacy policies when you leave this site to apply.
         </p>
         <p>

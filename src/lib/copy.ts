@@ -63,7 +63,7 @@ export const copy = {
       points: [
         "Bilingual staff — English and Spanish",
         "Open Monday through Saturday",
-        "Financing through Snap, AFF, Acima, and Koalafi",
+        "Financing through Snap, AFF, and Koalafi",
         "Cash App accepted",
       ],
     },
@@ -95,12 +95,6 @@ export const copy = {
           logo: "/brand/american.png",
         },
         {
-          id: "acima",
-          name: "Acima",
-          href: "https://www.acima.com/",
-          logo: "/brand/acima.png",
-        },
-        {
           id: "koalafi",
           name: "Koalafi",
           href: "https://www.koalafi.com/",
@@ -130,7 +124,7 @@ export const copy = {
         },
         {
           q: "What payment methods do you take?",
-          a: "Card, cash, Cash App, and financing through Snap, American First Finance, Acima, and Koalafi.",
+          a: "Card, cash, Cash App, and financing through Snap, American First Finance, and Koalafi.",
         },
       ],
     },
@@ -265,7 +259,7 @@ export const copy = {
       points: [
         "Personal bilingüe — inglés y español",
         "Abierto de lunes a sábado",
-        "Financiamiento con Snap, AFF, Acima y Koalafi",
+        "Financiamiento con Snap, AFF y Koalafi",
         "Se acepta Cash App",
       ],
     },
@@ -297,12 +291,6 @@ export const copy = {
           logo: "/brand/american.png",
         },
         {
-          id: "acima",
-          name: "Acima",
-          href: "https://www.acima.com/",
-          logo: "/brand/acima.png",
-        },
-        {
           id: "koalafi",
           name: "Koalafi",
           href: "https://www.koalafi.com/",
@@ -332,7 +320,7 @@ export const copy = {
         },
         {
           q: "¿Qué formas de pago aceptan?",
-          a: "Tarjeta, efectivo, Cash App y financiamiento con Snap, American First Finance, Acima y Koalafi.",
+          a: "Tarjeta, efectivo, Cash App y financiamiento con Snap, American First Finance y Koalafi.",
         },
       ],
     },

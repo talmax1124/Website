@@ -15,7 +15,7 @@ export function Financing() {
           </h2>
           <p className="mt-4 max-w-2xl text-base text-muted">{t.financing.lead}</p>
         </Reveal>
-        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {t.financing.partners.map((partner, i) => (
             <Reveal key={partner.id} delay={i * 0.05}>
               <a
