@@ -4,7 +4,9 @@ import {
   Link,
   Outlet,
   Scripts,
+  useRouterState,
 } from "@tanstack/react-router";
+import { Analytics } from "@vercel/analytics/react";
 import { AuthProvider } from "@/lib/auth/provider";
 import { PreviewHostBridge } from "@/components/preview-host-bridge";
 import { JsonLd } from "@/components/layout/json-ld";
@@ -27,6 +29,11 @@ function NotFound() {
       </Button>
     </section>
   );
+}
+
+function VercelAnalytics() {
+  const pathname = useRouterState({ select: (s) => s.location.pathname });
+  return <Analytics path={pathname} route={pathname} />;
 }
 
 export const Route = createRootRoute({
@@ -67,7 +74,11 @@ export const Route = createRootRoute({
     ],
   }),
   notFoundComponent: NotFound,
-  component: () => (
+  component: RootDocument,
+});
+
+function RootDocument() {
+  return (
     <html lang="en" className="antialiased" suppressHydrationWarning>
       <head>
         <HeadContent />
@@ -82,8 +93,9 @@ export const Route = createRootRoute({
             </SiteShell>
           </LanguageProvider>
         </AuthProvider>
+        <VercelAnalytics />
         <Scripts />
       </body>
     </html>
-  ),
-});
+  );
+}
