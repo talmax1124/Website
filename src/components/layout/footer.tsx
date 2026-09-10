@@ -13,8 +13,11 @@ export function Footer() {
     <footer className="border-t border-line bg-surface pb-24 text-fg md:pb-0">
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-12">
         <div className="md:col-span-5">
-          <Link to="/" className="inline-flex items-center" aria-label={SITE.name}>
-            <Mark className="text-[1.85rem] sm:text-3xl" />
+          <Link to="/" className="inline-flex items-center gap-2.5" aria-label={SITE.name}>
+            <Mark />
+            <span className="font-display text-xl font-semibold tracking-[0.08em] uppercase">
+              Obsessions Wheels
+            </span>
           </Link>
           <p className="mt-4 max-w-sm text-sm leading-relaxed text-muted">
             {t.footer.blurb}

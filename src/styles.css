@@ -1,20 +1,9 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@font-face {
-  font-family: "Ask Why";
-  src:
-    url("/fonts/Ask-Why.woff2") format("woff2"),
-    url("/fonts/Ask-Why.woff") format("woff");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-
 @theme {
   --font-sans: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
   --font-display: "Barlow Condensed", "Arial Narrow", "Segoe UI", sans-serif;
-  --font-wordmark: "Ask Why", "Barlow Condensed", "Arial Narrow", sans-serif;
 
   --color-bg: #f2f4f3;
   --color-surface: #ffffff;
